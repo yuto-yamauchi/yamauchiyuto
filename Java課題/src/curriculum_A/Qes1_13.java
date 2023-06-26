@@ -125,8 +125,8 @@ public class Qes1_13 {
 		        System.out.println();
 
 		        // 年齢・身長を整数型に変換して出力(Q12)
-		        int convertedAge = Integer.parseInt("24");
-		        int convertedHeight = (int) Double.parseDouble("168.5");
+		        int convertedAge = Integer.parseInt(age1);
+		        int convertedHeight = (int) Double.parseDouble(height1);
 		        System.out.println("年齢: " + convertedAge);
 		        System.out.println("身長: " + convertedHeight);
 
