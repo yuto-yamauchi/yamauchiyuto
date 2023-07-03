@@ -63,6 +63,9 @@ public class Qes1_3 {
 			// 入力された値が半角英数字の場合の処理
 			else {
 				System.out.println("半角英数字のみで名前を入力してください");
+				
+				// スキャナーを閉じる
+				scanner.close();
 			}
 		}        
 	}

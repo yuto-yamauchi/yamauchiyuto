@@ -17,23 +17,16 @@ public class Qes7 {
         double rika = 0;
         double syakai = 0;
         double ave;
+        String [] subject = {"英語","数学","理科","社会"};
         // 人数が2人以上の場合実行
         if(a >= 2) {
         	//　ループ処理
         	for(int i = 0; i < a; i++) {
-        		// 英語の処理
-        		System.out.print((i + 1) + "人目の『英語』の点数を入力してください：");
-        		table[i][0] = scanner.nextInt();
-        		// 数学の処理
-        		System.out.print((i + 1) + "人目の『数学』の点数を入力してください：");
-        		table[i][1] = scanner.nextInt();
-        		// 理科の処理
-        		System.out.print((i + 1) + "人目の『理科』の点数を入力してください：");
-        		table[i][2] = scanner.nextInt();
-        		// 社会の処理
-        		System.out.print((i + 1) + "人目の『社会』の点数を入力してください：");
-        		table[i][3] = scanner.nextInt();
         		
+        		for(int num = 0; num < subject.length; num++) {
+        			System.out.print((i + 1) + "人目の『" + subject[num] + "』の点数を入力してください：");
+        			table[i][num] = scanner.nextInt();
+        		}
         		System.out.println();
         		// 教科数のループ処理
         		for(int j = 0; j < 4; j++) {
@@ -58,6 +51,8 @@ public class Qes7 {
         	System.out.println("社会の平均点は" + String.format("%.2f", syakai / a) + "点です。");
         	System.out.println("全体の平均点は" + String.format("%.2f", (eigo + sugaku + rika + syakai) / (a * 4)) + "点です。");
     		}
+        //　スキャナーを閉じる
+        scanner.close();
       }
 }
         		

@@ -51,8 +51,10 @@ public class Qes6 {
     		// 値がその他の時の処理
     		default:
     			System.out.println("『" + code +  "』" + "は指定の商品ではありません\n");
-    			break;    			
+    			break;    	
     		}
     	}
-    }    	        
+    	//　スキャナーを閉じる
+    	scanner.close();
+    }     			
 }

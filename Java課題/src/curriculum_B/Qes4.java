@@ -10,8 +10,12 @@ public class Qes4 {
 			for(int j=1;j<10; j++) {
 				int result=i*j;
 				// 式の出力
-				System.out.printf("|%02d*%02d=%02d|",i,j,result);
-				System.out.print(" ");
+				System.out.printf("%02d*%02d=%02d",i,j,result);
+				// 式の間に｜｜を入力
+				if (j <= 8) {
+					System.out.printf("||");
+				}
+				
 			}
 			System.out.println("");
 		}
