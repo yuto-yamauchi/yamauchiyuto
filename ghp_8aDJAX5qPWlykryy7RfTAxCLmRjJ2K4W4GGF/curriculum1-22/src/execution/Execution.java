@@ -6,11 +6,11 @@ public class Execution {
 
 	public static void main(String[] args) {
 		// 各インスタンス作成
-		Process name = new Process("日本");
-		name.displayCountry ();
-		Process food = new Process("寿司","和食");
-		food.displayFood ();
-		Process date = new Process();
-		date.displayDate ();
+		Process process = new Process("日本");
+		process.displayCountry ();
+		Process process1 = new Process("寿司","和食");
+		process1.displayFood ();
+		Process process2 = new Process();
+		process2.displayDate ();
 	}
 }

@@ -22,15 +22,28 @@ public class Process {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd H:m:s");
 		date = sdf.format(now);
 	}
-	//　各メソッドを作成
-	public void displayCountry() {
-		System.out.println("こんにちは！ここは" + this.country + "です！");
-	}
-	public void displayFood() {
-		System.out.println("この" + this.food + "うまい");
-		System.out.println(this.food + "は" + this.type + "です");		
-	}
-	public void displayDate() {
-		System.out.println("今の現在日時は" + date + "です");
+	 // 各メソッドを作成
+    public void displayCountry() {
+        if (country != null) {
+            System.out.println("こんにちは！ここは" + this.country + "です！");
+        } else {
+            System.out.println("国が設定されていません。");
+        }
+    }
+    public void displayFood() {
+        if (food != null && type != null) {
+            System.out.println("この" + this.food + "うまい");
+            System.out.println(this.food + "は" + this.type + "です");
+        } else {
+            System.out.println("食べ物またはタイプが設定されていません。");
+        }
+    }
+
+    public void displayDate() {
+        if (date != null) {
+            System.out.println("今の現在日時は" + date + "です");
+        } else {
+            System.out.println("日付が設定されていません。");
+        }
 	}
 }
