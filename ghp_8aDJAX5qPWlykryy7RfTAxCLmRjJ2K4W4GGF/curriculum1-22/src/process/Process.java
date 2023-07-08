@@ -2,6 +2,7 @@ package process;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class Process {
 	//各変数を宣言
@@ -24,26 +25,26 @@ public class Process {
 	}
 	 // 各メソッドを作成
     public void displayCountry() {
-        if (country != null) {
-            System.out.println("こんにちは！ここは" + this.country + "です！");
+        if (Objects.isNull(country)) {
+        	 System.out.println("国が設定されていません。");
         } else {
-            System.out.println("国が設定されていません。");
+        	System.out.println("こんにちは！ここは" + this.country + "です！");
         }
     }
     public void displayFood() {
-        if (food != null && type != null) {
-            System.out.println("この" + this.food + "うまい");
-            System.out.println(this.food + "は" + this.type + "です");
+        if (Objects.isNull(food) || Objects.isNull(type)) {
+        	System.out.println("食べ物またはタイプが設定されていません。");
         } else {
-            System.out.println("食べ物またはタイプが設定されていません。");
+        	System.out.println("この" + this.food + "うまい");
+            System.out.println(this.food + "は" + this.type + "です");
         }
     }
 
     public void displayDate() {
-        if (date != null) {
-            System.out.println("今の現在日時は" + date + "です");
+        if (Objects.isNull(date)) {
+        	System.out.println("日付が設定されていません。");
         } else {
-            System.out.println("日付が設定されていません。");
+        	System.out.println("今の現在日時は" + date + "です");
         }
 	}
 }
