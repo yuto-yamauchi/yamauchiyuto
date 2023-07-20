@@ -50,10 +50,10 @@ public class Excution {
 		// コンソール出力
 		System.out.println("コンソールに文字を入力してください");
 		String str = scanner.nextLine();
-		String[] data = str.split(",");
 		if(Objects.isNull(str) || str.length() <= 0) {
 			System.out.println("文字が入力されていません");
 		} else {
+			String[] data = str.split(",");
 			for(int i = 0; i < data.length; i++) {
 				Process processData = new Process(data[i]);
 				processData.display();
