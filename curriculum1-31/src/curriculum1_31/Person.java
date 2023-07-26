@@ -2,15 +2,17 @@ package curriculum1_31;
 
 public class Person {
 	// 各変数を宣言
-	private String name;
+	private String fastName;
+	public String lastName;
 	private int age;
 	private double height;
 	private double weight;
 	private static int count;
 	
-	public Person(String name, int age, double height, double weight) {
+	public Person(String fastName, String lastName ,int age, double height, double weight) {
 		// 引数を各変数に代入
-		this.name = name;
+		this.fastName = fastName;
+		this.lastName = lastName;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
@@ -21,8 +23,11 @@ public class Person {
 		double bmi = Math.floor(weight / (height * height));
 		return bmi;
 	}
+	public String fullName(){
+		return this.fastName + this.lastName;
+	}
 	public void print() {
-		System.out.println("名前は" + this.name + "です");
+		System.out.println("名前は" + this.fullName() + "です");
 		System.out.println("BMIは" + this.bmi() + "です");
 		System.out.println("年は" + this.age + "才です");
 	}
@@ -30,7 +35,7 @@ public class Person {
 		System.out.println("合計" + count + "人です");
 	}
 	public String getName() {
-		return name;
+		return fullName();
 	}
 	public void buy(Car car) {
 		car.setOwner(this.getName());
